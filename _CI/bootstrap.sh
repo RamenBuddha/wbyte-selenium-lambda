@@ -9,6 +9,9 @@ if [[ -d "infra" ]]; then
     npm i -g aws-cdk@${CDK_VERSION}
     npm ci --include=dev
 
+    cdk bootstrap aws://${AWS_ACCOUNT_ID}/${AWS_REGION} --force
+
+
     echo "Synthesize infra.."
 
     npm run cdk synth -- \
