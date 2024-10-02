@@ -16,9 +16,9 @@ if [[ -d "infra" ]]; then
 
     npm run cdk synth -- \
         --quiet \
-        --context name=${APPLICATION_NAME} \
+        --context name= "booker" \
         --context accountId=${AWS_ACCOUNT_ID} \
         --context region=${AWS_REGION} \
         --context apiKey= "no" \
-        --context applicationTag=${APPLICATION_TAG}
+        --context applicationTag= "double no"
 fi
